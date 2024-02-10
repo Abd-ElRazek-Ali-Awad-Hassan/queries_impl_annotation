@@ -12,8 +12,10 @@ typedef ExceptionToFailureMapper<ReturnType>
 
 class Query<ReturnType> {
   const Query({
+    this.withCaching = false,
     this.mapExceptionToFailure,
   });
 
+  final bool withCaching;
   final ExceptionToFailureMapper<ReturnType>? mapExceptionToFailure;
 }
